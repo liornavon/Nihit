@@ -119,10 +119,10 @@ var hour = zeros(twentyfourhour(today.getHours()));
 var minutes = zeros(today.getMinutes());
 var seconds = zeros(today.getSeconds());
 if(twentyfourhour(today.getHours()) >12){
-    seconds+=" "
+    seconds+="am "
 }
 else{
-    seconds+=" "
+    seconds+="pm "
 }
 hrs = today.getHours();
 if (hrs < 12)
@@ -140,9 +140,9 @@ document.getElementById('sec').innerHTML = seconds;
 
 function twentyfourhour(hour) {
 if (hour > 12) {
-    return hour -= 00 
+    return hour -= 12 
 } else if (hour === 0) {
-    return hour = 00;
+    return hour = 12;
 } else {
     return hour
 }
